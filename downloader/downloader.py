@@ -23,7 +23,7 @@ def printTweet(tweets, outputFileName):
 
 for key in keywordList:
 	while startDate < endDate:
-		tweetCriteria = got.manager.TweetCriteria().setQuerySearch(key).setSince(startDate.strftime('%Y-%m-%d')).setUntil((startDate + relativedelta(months=+1)).strftime('%Y-%m-%d')).setMaxTweets(1)
+		tweetCriteria = got.manager.TweetCriteria().setQuerySearch(key).setSince(startDate.strftime('%Y-%m-%d')).setUntil((startDate + relativedelta(months=+1)).strftime('%Y-%m-%d'))
 		tweets = got.manager.TweetManager.getTweets(tweetCriteria)
 		printTweet(tweets, "%s_%s.txt"%(key,startDate.strftime('%Y-%m')))
 		startDate = startDate + relativedelta(months=+1)
