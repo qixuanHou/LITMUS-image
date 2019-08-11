@@ -4,7 +4,7 @@ import sys,getopt,datetime,codecs, requests
 from dateutil.relativedelta import *
 
 keywordList = ["landslide", "rockslide", "mudslide", "rockfall"]
-startDate = datetime.date(2018, 1, 1)
+startDate = datetime.date(2018, 2, 1)
 endDate = datetime.date(2019, 1, 1)
 
 
@@ -27,4 +27,5 @@ for key in keywordList:
 		tweets = got.manager.TweetManager.getTweets(tweetCriteria)
 		printTweet(tweets, "%s_%s.txt"%(key,startDate.strftime('%Y-%m')))
 		startDate = startDate + relativedelta(months=+1)
+
 
