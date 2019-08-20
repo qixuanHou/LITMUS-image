@@ -4,8 +4,8 @@ import sys,getopt,datetime,codecs, requests
 from dateutil.relativedelta import *
 
 keywordList = ["landslide", "rockslide", "mudslide", "rockfall"]
-startDate = datetime.date(2018, 6, 1)
-endDate = datetime.date(2019, 1, 1)
+startDate = datetime.date(2018, 5, 1)
+endDate = datetime.date(2019, 6, 1)
 
 
 def printTweet(tweets, outputFileName):
